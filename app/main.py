@@ -65,10 +65,11 @@ class AsciiJSONResponse(JSONResponse):
 
 
 APP_DESCRIPTION = """
-这是一个面向服装电商 TikTok 本地化的素材处理 MVP。
+这是一个面向跨境电商短视频素材处理的小红书视频采集与 BGM 替换工作流 MVP。
 
-当前版本聚焦本地视频上传、视频基础信息分析、镜头分段、关键帧提取和素材处理包生成。
-它不会自动下载小红书素材，不做去水印，不自动发布 TikTok，也不会调用收费 AI API。
+当前版本覆盖本地视频上传、BGM 替换、视频基础信息分析、镜头分段、关键帧提取、素材处理包生成，以及小红书作品链接 / 作者主页的本机自动化适配。
+公开版不内置真实 cookie、登录态、素材、OpenClaw 私人配置或模型密钥；小红书链接和作者主页处理依赖你本机合法配置的 XHS-Downloader 或已登录浏览器自动化。
+项目不做去水印，不自动发布 TikTok，也不承诺播放量、转化率或收益。
 
 接口路径和核心 JSON 字段名保持英文，便于后续接入 n8n、脚本、AI API、剪映/CapCut 草稿工具、FFmpeg 模板渲染和 TikTok API。
 中文说明主要用于让运营、主管和非开发同事理解每个接口的作用。
@@ -83,11 +84,11 @@ TAGS_METADATA = [
     {"name": "素材处理包", "description": "生成面向服装电商 TikTok 本地化的处理包。"},
     {"name": "素材查询", "description": "查看单个素材或全部素材的处理状态。"},
     {"name": "素材池", "description": "候选素材池、人工添加、选中/放弃/追更和准备处理入口。"},
-    {"name": "素材发现", "description": "小红书 mock 搜索和博主追更列表。"},
+    {"name": "素材发现", "description": "小红书素材发现、候选池和博主追更列表；公开版不包含真实登录态。"},
 ]
 
 app = FastAPI(
-    title="服装电商 TikTok 本地化素材处理 MVP",
+    title="小红书视频采集与 BGM 替换工作流 MVP",
     description=APP_DESCRIPTION,
     version="0.1.0",
     openapi_tags=TAGS_METADATA,
@@ -218,10 +219,10 @@ def guide() -> dict:
     response_model=SourceDiscoveryResponse,
     tags=["素材发现"],
     summary="小红书候选素材搜索",
-    description="默认使用 mock 模式生成小红书候选素材并写入候选池。external 模式仅预留 adapter 配置，不强依赖真实第三方服务。",
+    description="默认使用演示模式（mock）生成小红书候选素材并写入候选池；外部模式（external）预留给 XHS-Downloader / MCP 等真实适配。",
 )
 def xiaohongshu_search(payload: XiaohongshuSearchRequest) -> dict:
-    """搜索或模拟生成小红书候选素材，当前默认 mock/manual 可用。"""
+    """搜索或演示生成小红书候选素材，当前默认演示模式（mock）和手动模式（manual）可用。"""
     return search_xiaohongshu(
         keyword=payload.keyword,
         limit=payload.limit,

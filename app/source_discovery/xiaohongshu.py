@@ -47,7 +47,7 @@ def generate_mock_candidates(keyword: str, limit: int, selected_region: str, sel
                 "source_platform": "xiaohongshu",
                 "source_url": f"https://www.xiaohongshu.com/mock/{keyword}-{idx}",
                 "title": full_title,
-                "description": "mock 候选素材，用于跑通素材池流程，不代表真实平台数据。",
+                "description": "演示候选素材（mock），用于跑通素材池流程，不代表真实平台数据。",
                 "author_name": author,
                 "author_profile_url": f"https://www.xiaohongshu.com/user/mock-{idx}",
                 "follower_count": followers,
@@ -73,7 +73,7 @@ def search_xiaohongshu(keyword: str, limit: int, mode: str, selected_region: str
     if normalized_mode == "manual":
         return {
             "candidates": [],
-            "message_zh": "当前为 manual 模式，请通过 POST /material-pool/candidates 人工添加候选素材。",
+            "message_zh": "当前为手动模式（manual），请通过 POST /material-pool/candidates 人工添加候选素材。",
             "mode_used": "manual",
             "next_action_zh": "复制素材链接、标题和作者信息后，人工写入候选素材池。",
         }
@@ -83,21 +83,21 @@ def search_xiaohongshu(keyword: str, limit: int, mode: str, selected_region: str
             mock_rows = [add_candidate(row, source_type="auto") for row in generate_mock_candidates(keyword, min(limit, 5), selected_region, selected_style)]
             return {
                 "candidates": mock_rows,
-                "message_zh": "外部小红书服务未配置，当前已使用 mock 流程写入候选素材池。",
+                "message_zh": "外部小红书服务未配置，当前已使用演示流程（mock）写入候选素材池。",
                 "mode_used": "mock",
-                "next_action_zh": "如需真实抓取，后续配置 xiaohongshu-mcp 或 XHS-Downloader adapter。",
+                "next_action_zh": "如需处理真实作品，后续配置 xiaohongshu-mcp 或 XHS-Downloader 适配器。",
             }
         return {
             "candidates": [],
-            "message_zh": "external 模式已预留，但本轮不真实集成第三方服务。",
+            "message_zh": "外部模式（external）已预留，但本轮不强制集成第三方服务。",
             "mode_used": "external",
-            "next_action_zh": "请先使用 mock/manual 跑通主流程，后续再接外部 adapter。",
+            "next_action_zh": "请先使用演示模式（mock）或手动模式（manual）跑通主流程，后续再接外部适配器。",
         }
 
     mock_rows = [add_candidate(row, source_type="auto") for row in generate_mock_candidates(keyword, min(limit, 5), selected_region, selected_style)]
     return {
         "candidates": mock_rows,
-        "message_zh": "已使用 mock 模式生成小红书候选素材，并写入候选素材池。",
+        "message_zh": "已使用演示模式（mock）生成小红书候选素材，并写入候选素材池。",
         "mode_used": "mock",
         "next_action_zh": "请在候选素材池中人工筛选，选中、放弃或加入长期追更。",
     }
