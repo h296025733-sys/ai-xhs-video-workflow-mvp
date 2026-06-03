@@ -1,5 +1,5 @@
 {
-  "说明": "项目主配置示例。复制为 config.json 后按本机环境填写，真实配置不要提交。",
+  "说明": "项目主配置示例。复制为 config.json 后按本机环境填写，真实 cookie、token、素材路径和公司路径不要提交。",
   "api_base_url": "http://127.0.0.1:8004",
   "output_dir": "D:\\workspace\\your-project\\outputs",
   "runtime_dir": "D:\\workspace\\your-project\\.runtime",
@@ -12,6 +12,7 @@
     "creator_import_mode": "manual_links",
     "cdp_url": "http://127.0.0.1:9222",
     "author_cache_path": "D:\\workspace\\your-project\\.runtime\\xhs_author_profile_cache.json",
+    "说明": "作者主页自动化建议复用本机已登录 Chrome；cookie 只允许在本机临时使用，不应写入仓库。",
     "cookie": "YOUR_XHS_COOKIE_HERE"
   },
   "bgm": {
