@@ -1,0 +1,20 @@
+{
+  "说明": "项目主配置示例。复制为 config.json 后按本机环境填写，真实配置不要提交。",
+  "api_base_url": "http://127.0.0.1:8004",
+  "output_dir": "D:\\workspace\\your-project\\outputs",
+  "runtime_dir": "D:\\workspace\\your-project\\.runtime",
+  "ffmpeg_path": "YOUR_FFMPEG_PATH_OR_EMPTY",
+  "ffprobe_path": "YOUR_FFPROBE_PATH_OR_EMPTY",
+  "xhs": {
+    "download_mode": "disabled",
+    "downloader_api_base_url": "http://127.0.0.1:5556",
+    "downloader_project_dir": "YOUR_XHS_DOWNLOADER_PATH",
+    "creator_import_mode": "manual_links",
+    "cookie": "YOUR_XHS_COOKIE_HERE"
+  },
+  "bgm": {
+    "default_strategy": "top_used_random",
+    "default_start_seconds": 0,
+    "cache_path": "D:\\workspace\\your-project\\.runtime\\bgm_smart_cache.json"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "说明": "模型配置示例。当前 MVP 不强依赖付费模型，后续可用于文案、审核或多语言本地化。",
+  "provider": "YOUR_MODEL_PROVIDER",
+  "model": "YOUR_MODEL_NAME",
+  "api_key": "YOUR_API_KEY_HERE",
+  "base_url": "YOUR_MODEL_BASE_URL",
+  "temperature": 0.3
+}

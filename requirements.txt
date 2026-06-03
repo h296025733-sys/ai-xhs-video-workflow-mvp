@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+scenedetect
+opencv-python
+pytest
+requests
+httpx
+imageio-ffmpeg
+yt-dlp

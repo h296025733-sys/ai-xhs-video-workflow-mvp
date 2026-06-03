@@ -1,0 +1,14 @@
+{
+  "说明": "这是示例任务，不包含真实链接、token、cookie 或素材。",
+  "source_type": "xhs_note_links",
+  "note_urls": [
+    "https://www.xiaohongshu.com/explore/YOUR_NOTE_ID"
+  ],
+  "creator_home_url": "https://www.xiaohongshu.com/user/profile/YOUR_CREATOR_ID",
+  "limit": 3,
+  "replace_audio": true,
+  "bgm_strategy": "search_download",
+  "bgm_query": "日本 TikTok OOTD 热门歌 2026",
+  "bgm_start_seconds": 20,
+  "dry_run": true
+}

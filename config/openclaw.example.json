@@ -1,0 +1,13 @@
+{
+  "说明": "OpenClaw 接入示例，不包含真实 workspace、账号、token 或模型配置。",
+  "gateway_url": "YOUR_OPENCLAW_GATEWAY_URL",
+  "workspace_name": "xhs-video-workflow-demo",
+  "entry_command": "python scripts/openclaw_quick_bgm.py --message-file YOUR_MESSAGE_FILE --api-base http://127.0.0.1:8004",
+  "default_timeout_seconds": 600,
+  "reply_policy": {
+    "language": "中文",
+    "show_internal_logs": false,
+    "hide_cookie": true,
+    "hide_download_url": true
+  }
+}

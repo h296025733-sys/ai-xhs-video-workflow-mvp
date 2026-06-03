@@ -1,0 +1,63 @@
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+
+*.key
+*.pem
+*.p12
+*.crt
+*.token
+*token*
+*cookie*
+*cookies*
+*secret*
+*password*
+
+# 私人配置与运行态
+.openclaw/
+.runtime/
+.cache/
+logs/
+log/
+tmp/
+temp/
+.tmp/
+outputs/
+downloads/
+download/
+videos/
+audios/
+bgm/
+media/
+素材/
+成品/
+处理后视频/
+
+# 媒体与大文件
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+*.m4a
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Python / Node
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.pyc
+
+# 日志与批处理输出
+*.log
+*.jsonl
+*.db
+*.sqlite
+*.task

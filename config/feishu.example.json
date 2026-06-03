@@ -1,0 +1,9 @@
+{
+  "说明": "飞书应用配置示例。真实 App Secret、tenant token、user token 不要提交。",
+  "enabled": false,
+  "app_id": "YOUR_FEISHU_APP_ID_HERE",
+  "app_secret": "YOUR_FEISHU_APP_SECRET_HERE",
+  "event_callback_path": "/im/feishu/events",
+  "message_file_dir": "D:\\workspace\\your-project\\.runtime\\im_messages",
+  "entry_command": "python scripts/openclaw_quick_bgm.py --message-file YOUR_MESSAGE_FILE"
+}

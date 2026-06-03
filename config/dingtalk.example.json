@@ -1,0 +1,8 @@
+{
+  "说明": "钉钉机器人配置示例。真实 token、secret、签名密钥不要提交。",
+  "enabled": false,
+  "webhook_url": "https://oapi.dingtalk.com/robot/send?access_token=YOUR_DINGTALK_TOKEN_HERE",
+  "sign_secret": "YOUR_DINGTALK_SIGN_SECRET_HERE",
+  "message_file_dir": "D:\\workspace\\your-project\\.runtime\\im_messages",
+  "entry_script": "scripts/run_xhs_author_from_dingtalk.ps1"
+}
