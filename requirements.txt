@@ -4,8 +4,10 @@ python-multipart
 pydantic
 scenedetect
 opencv-python
+numpy
 pytest
 requests
 httpx
 imageio-ffmpeg
 yt-dlp
+playwright

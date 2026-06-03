@@ -10,6 +10,8 @@
     "downloader_api_base_url": "http://127.0.0.1:5556",
     "downloader_project_dir": "YOUR_XHS_DOWNLOADER_PATH",
     "creator_import_mode": "manual_links",
+    "cdp_url": "http://127.0.0.1:9222",
+    "author_cache_path": "D:\\workspace\\your-project\\.runtime\\xhs_author_profile_cache.json",
     "cookie": "YOUR_XHS_COOKIE_HERE"
   },
   "bgm": {

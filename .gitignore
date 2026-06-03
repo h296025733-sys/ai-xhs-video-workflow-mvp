@@ -18,6 +18,11 @@
 .openclaw/
 .runtime/
 .cache/
+browser/
+browsers/
+cookies/
+sessions/
+profiles/
 logs/
 log/
 tmp/
